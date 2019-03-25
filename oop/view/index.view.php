@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Students</title>
-    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/app.css">
 </head>
 <body>
 <div class="center">
@@ -19,13 +19,14 @@
                 <td><?= $student['age'] ?></td>
                 <td><?= $student['class'] ?></td>
                 <td>
-                    <a href="/del.php?id=<?= $student['id'] ?>">删除</a>
-                    <a href="/edit.view.php?id=<?= $student['id'] ?>">编辑</a>
+                    <a href="../show.php?id=<?= $student['id'] ?>">查看</a>
+                    <a href="../edit.php?id=<?= $student['id'] ?>">编辑</a>
+                    <a href="../delete.php?id=<?= $student['id'] ?>">删除</a>
                 </td>
             </tr>
         <?php endforeach ?>
     </table>
-    <div><a href="/add_form.view.php">add student</a></div>
+    <div><a href="./create_form.view.php">add student</a></div>
 </div>
 </body>
 </html>

@@ -1,9 +1,15 @@
 <?php
-function my_autoload($class){
+
+/**
+ * AutoLoad
+ * @param $class Class
+ */
+function autoload($class){
     $dir = __dir__;
     $path = str_replace("\\","/",$class);
     $path .= '.php';
     $path = $dir ."/../".$path;
+
     if(file_exists($path)){
         require($path);
     }else{
@@ -11,4 +17,4 @@ function my_autoload($class){
     }
 }
 
-spl_autoload_register('my_autoload');
+spl_autoload_register('autoload');
